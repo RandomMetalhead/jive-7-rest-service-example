@@ -1,0 +1,4 @@
+build.number=${build.number}
+build.project=${build.project}
+build.revision=${build.revision}
+pom.version=${project.version}

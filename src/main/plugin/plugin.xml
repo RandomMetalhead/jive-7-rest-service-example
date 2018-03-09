@@ -1,0 +1,28 @@
+<plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.jivesoftware.com/schemas/clearspace/2_5/plugin.xsd">
+    <name>example_rest_1_0</name>
+    <description>example_rest_1_0 Plugin by RandomMetalhead</description>
+    <author>RandomMetalhead</author>
+    <version>${project.version}</version>
+    <minServerVersion>${jive.version.min}</minServerVersion>
+    <maxServerVersion>${jive.version.max}</maxServerVersion>
+    
+	<!-- you will want to change your class name here! -->
+    <class>com.jivesoftware.randommetalhead.rest.RestServicePlugin</class>
+
+	<!-- 
+    <authorURL>
+    <pluginURL>
+    <databaseKey>
+    <databaseVersion>
+    <components>
+    <css>
+    <soy>
+    <javascript>
+    <widget>
+    <macro>
+    <urlmapping>
+    <sitemesh>
+	-->
+
+</plugin>

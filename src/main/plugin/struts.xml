@@ -1,0 +1,26 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="example_rest_1_0-actions" extends="community-default">
+    	    <!-- document actions -->
+        <action name="document" class="com.jivesoftware.community.action.CustomDocumentAction">
+            <interceptor-ref name="defaultStack"/>
+            <interceptor-ref name="token">
+                <param name="excludeMethods">input,cancel,doc-deleted,success,execute</param>
+            </interceptor-ref>
+            <interceptor-ref name="documentViewCount"/>
+            <result name="doc-deleted" type="httpstatusview">
+                <param name="status">404</param>
+                <param name="location">/template/docs/document-deleted.ftl</param>
+            </result>
+            <result name="success">/template/docs/document.ftl</result>
+            <result name="approved" type="httpheader">200</result>
+            <result name="rejected" type="httpheader">200</result>
+            <result name="rejected-error" type="httpstatusview">
+                <param name="status">500</param>
+                <param name="location">/template/docs/include/doc-needs-approval.ftl</param>
+            </result>
+        </action>
+
+    </package>
+</struts>
