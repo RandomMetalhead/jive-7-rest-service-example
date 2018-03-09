@@ -1,5 +1,5 @@
 # Example Rest-Service for Jive 7
-Example plugin how to build a rest service for Jive 7
+Example plugin how to build a v2 rest service for Jive 7
 
 ## How to use
 1. Build with maven
